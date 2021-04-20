@@ -23,7 +23,7 @@ class FixedDirectionSprite(Sprite):
 
 class Bullet(FixedDirectionSprite):
     def __init__(self, app, x, y, vx, vy):
-        super().__init__(app, 'images/bullet1.png', x, y, vx, vy)
+        super().__init__(app, 'images/bullet1.gif', x, y, vx, vy)
 
     def is_colliding_with_enemy(self, enemy):
         return self.is_within_distance(enemy, BULLET_ENEMY_HIT_RADIUS)
@@ -31,12 +31,12 @@ class Bullet(FixedDirectionSprite):
 
 class Enemy(FixedDirectionSprite):
     def __init__(self, app, x, y, vx, vy):
-        super().__init__(app, 'images/enemy1.png', x, y, vx, vy)
+        super().__init__(app, 'images/enemy1.gif', x, y, vx, vy)
 
 
 class Ship(Sprite):
     def __init__(self, app, x, y):
-        super().__init__(app, 'images/ship.png', x, y)
+        super().__init__(app, 'images/ship.gif', x, y)
 
         self.app = app
 
